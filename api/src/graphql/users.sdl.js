@@ -24,6 +24,7 @@ export const schema = gql`
     email: String!
     name: String
     username: String!
+    birthDate: DateTime
   }
 
   input UpdateUserInput {
@@ -31,7 +32,6 @@ export const schema = gql`
     name: String
     birthDate: DateTime
     username: String
-    location: Location
   }
 
   type Mutation {
