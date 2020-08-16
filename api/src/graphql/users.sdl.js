@@ -18,13 +18,13 @@ export const schema = gql`
   type Query {
     users: [User!]!
     user(id: Int!): User!
+    userByIssuer(issuer: String!): User!
   }
 
   input CreateUserInput {
     email: String!
-    name: String
     username: String!
-    birthDate: DateTime
+    issuer: String!
   }
 
   input UpdateUserInput {
