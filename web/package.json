@@ -7,6 +7,7 @@
   ],
   "dependencies": {
     "@redwoodjs/auth": "^0.15.3",
+    "@redwoodjs/forms": "^0.15.3",
     "@redwoodjs/router": "^0.14.0",
     "@redwoodjs/web": "^0.14.0",
     "magic-sdk": "^2.4.7",

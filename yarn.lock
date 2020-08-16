@@ -2744,6 +2744,15 @@
   resolved "https://registry.yarnpkg.com/@redwoodjs/eslint-plugin-redwood/-/eslint-plugin-redwood-0.14.0.tgz#8cd49e151bd2e1621b1c7a72f6624c407082f25a"
   integrity sha512-gyHEkW9322StO69k/2a8lmRrVZgVkdTDm7gxpfv0dzaGmng/UpCfpPv/ezTfrBP7ij7Cgd4LXufVYdstXojlDA==
 
+"@redwoodjs/forms@^0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@redwoodjs/forms/-/forms-0.15.3.tgz#10df1e2e26ba8a27b773e8d3a0135cbf28e0e070"
+  integrity sha512-ORHlNjB92kWYBHSTR0zYgUZ/ekWJs8MSyT/ni1kzI38+T9YebIA93lBF5Bl+icx0AiI3/38Slxj6y+Wdd8XE/A==
+  dependencies:
+    core-js "3.6.4"
+    pascalcase "1.0.0"
+    react-hook-form "^5.1.3"
+
 "@redwoodjs/internal@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@redwoodjs/internal/-/internal-0.14.0.tgz#f8c05fae203b30ee04cc54f029e9a0ffe729e406"
@@ -12174,15 +12183,15 @@ pascal-case@^3.1.1:
     no-case "^3.0.3"
     tslib "^1.10.0"
 
+pascalcase@1.0.0, pascalcase@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-1.0.0.tgz#d2fd7d73f2969606d2b56e17f5261be41c43c381"
+  integrity sha512-BSExi0rRnCHReJys6NocaK+cfTXNinAegfWBvr0JD3hiaEG7Nuc7r0CIdOJunXrs8gU/sbHQ9dxVAtiVQisjmg==
+
 pascalcase@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   integrity sha1-s2PlXoAGym/iF4TS2yK9FdeRfxQ=
-
-pascalcase@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-1.0.0.tgz#d2fd7d73f2969606d2b56e17f5261be41c43c381"
-  integrity sha512-BSExi0rRnCHReJys6NocaK+cfTXNinAegfWBvr0JD3hiaEG7Nuc7r0CIdOJunXrs8gU/sbHQ9dxVAtiVQisjmg==
 
 path-browserify@0.0.1:
   version "0.0.1"

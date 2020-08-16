@@ -1,3 +1,6 @@
+import { context } from '@redwoodjs/api'
+
+import { requireAuth } from 'src/lib/auth'
 import { db } from 'src/lib/db'
 
 export const learnings = () => {
@@ -11,8 +14,14 @@ export const learning = ({ id }) => {
 }
 
 export const createLearning = ({ input }) => {
+  requireAuth()
   return db.learning.create({
-    data: input,
+    data: {
+      ...input,
+      author: {
+        connect: { id: context.currentUser.id },
+      },
+    },
   })
 }
 
