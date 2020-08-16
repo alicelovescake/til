@@ -10,7 +10,19 @@ export const user = ({ id }) => {
   })
 }
 
+export const userByIssuer = ({ issuer }) => {
+  return db.user.findOne({
+    where: { issuer },
+  })
+}
+
 export const createUser = ({ input }) => {
+  const emailWithoutDomain = input.email.split('@')[0]
+  input.username = `${emailWithoutDomain}${new Date()
+    .getTime()
+    .toString()
+    .slice(-5)}`
+
   return db.user.create({
     data: input,
   })
