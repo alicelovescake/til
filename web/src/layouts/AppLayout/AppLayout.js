@@ -1,15 +1,14 @@
 import Nav from 'src/components/Nav'
 
-const HomePage = () => {
+const AppLayout = ({ children }) => {
   return (
     <>
       <div className="container mx-auto">
         <Nav />
-
-        <h1 className="font-bold text-4xl">Welcome!</h1>
+        {children}
       </div>
     </>
   )
 }
 
-export default HomePage
+export default AppLayout

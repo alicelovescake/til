@@ -1,11 +1,11 @@
 import { render } from '@redwoodjs/testing'
 
-import HomePage from './HomePage'
+import AppLayout from './AppLayout'
 
-describe('HomePage', () => {
+describe('AppLayout', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<HomePage />)
+      render(<AppLayout />)
     }).not.toThrow()
   })
 })
