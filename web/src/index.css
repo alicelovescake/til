@@ -1,3 +1,8 @@
 @tailwind base;
+
+body {
+  @apply bg-til-offwhite;
+}
+
 @tailwind components;
 @tailwind utilities;
