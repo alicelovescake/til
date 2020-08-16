@@ -9,6 +9,7 @@ export const schema = gql`
     likes: [Like]!
     comments: [Comment]!
     type: LearningType!
+    content: String!
     createdAt: DateTime!
     updatedAt: DateTime!
   }
@@ -24,13 +25,13 @@ export const schema = gql`
   }
 
   input CreateLearningInput {
-    authorId: Int!
     type: LearningType!
+    content: String!
   }
 
   input UpdateLearningInput {
-    authorId: Int
     type: LearningType
+    content: String
   }
 
   type Mutation {
