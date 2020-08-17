@@ -5,7 +5,6 @@ const FeedPage = () => {
   return (
     <>
       <AppLayout>
-        <h1>FeedPage</h1>
         <LearningComposer />
       </AppLayout>
     </>

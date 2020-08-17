@@ -1,6 +1,7 @@
 import { useAuth } from '@redwoodjs/auth'
 import { useState } from 'react'
 import Modal from 'src/components/Modal'
+import Button from 'src/components/Button'
 
 const AuthModal = () => {
   const [email, setEmail] = useState('')
@@ -50,12 +51,9 @@ const AuthModal = () => {
             placeholder="leonardo.davinci@florencemail.com"
           />
 
-          <button
-            className="bg-til-green hover:bg-til-green-dark rounded-lg text-white py-2 px-4 font-bold"
-            onClick={async () => { await logIn({ email }) }}
-          >
+          <Button onClick={async () => { await logIn({ email }) }} >
             {isAuthenticated ? 'Log out' : 'Log in'}
-          </button>
+          </Button>
         </form>
       </Modal>
     </div>
