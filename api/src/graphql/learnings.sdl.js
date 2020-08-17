@@ -14,23 +14,16 @@ export const schema = gql`
     updatedAt: DateTime!
   }
 
-  enum LearningType {
-    SUCCESS
-    FAILURE
-  }
-
   type Query {
     learnings: [Learning!]!
     learning(id: Int!): Learning!
   }
 
   input CreateLearningInput {
-    type: LearningType!
     content: String!
   }
 
   input UpdateLearningInput {
-    type: LearningType
     content: String
   }
 
