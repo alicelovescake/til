@@ -1,4 +1,5 @@
 import { Redirect, routes } from '@redwoodjs/router'
+
 export const QUERY = gql`
   query userByUsernameQuery($username: String!) {
     userByUsername(username: $username) {
@@ -21,7 +22,6 @@ export const Empty = () => <Redirect to={routes.notfound()} />
 export const Failure = ({ error }) => <div>Error: {error.message}</div>
 
 export const Success = ({ userByUsername }) => {
-  console.log(userByUsername)
   return (
     <>
       <h1>{userByUsername.username}</h1>
