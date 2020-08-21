@@ -19,6 +19,7 @@ export const schema = gql`
     users: [User!]!
     user(id: Int!): User!
     userByIssuer(issuer: String!): User!
+    userByUsername(username: String!): User!
   }
 
   input CreateUserInput {

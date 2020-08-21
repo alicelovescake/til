@@ -8,7 +8,6 @@ export const schema = gql`
     tags: [Tag]!
     likes: [Like]!
     comments: [Comment]!
-    type: LearningType!
     content: String!
     createdAt: DateTime!
     updatedAt: DateTime!
