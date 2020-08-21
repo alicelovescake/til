@@ -10,11 +10,12 @@
     "@redwoodjs/forms": "^0.15.3",
     "@redwoodjs/router": "^0.14.0",
     "@redwoodjs/web": "^0.14.0",
+    "date-fns": "^2.15.0",
     "magic-sdk": "^2.4.7",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-icons": "^3.10.0"
+    "react-icons": "^3.11.0"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.6",

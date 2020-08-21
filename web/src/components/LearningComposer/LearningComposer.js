@@ -4,9 +4,9 @@ import {
   TextAreaField,
   FieldError,
   Submit,
-  RadioField,
 } from '@redwoodjs/forms'
 import { useMutation } from '@redwoodjs/web'
+import { useForm } from 'react-hook-form'
 
 import Button from 'src/components/Button'
 
@@ -20,12 +20,16 @@ const CREATE_LEARNING = gql`
 
 const LearningComposer = () => {
   const [create] = useMutation(CREATE_LEARNING)
+  const formMethods = useForm()
+
   const onSubmit = (input) => {
     create({ variables: { input } })
+    formMethods.reset()
   }
+
   return (
     <div className="bg-white rounded-lg p-4 w-1/2 mx-auto shadow-lg">
-      <Form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit} formMethods={formMethods}>
         <Label name="content" className="hidden" errorClassName="text-red-600" />
         <TextAreaField
           name="content"
