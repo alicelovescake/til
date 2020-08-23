@@ -1,4 +1,5 @@
 import { db } from 'src/lib/db'
+import { requireAuth } from 'src/lib/auth'
 
 export const comments = () => {
   return db.comment.findMany()
@@ -11,8 +12,18 @@ export const comment = ({ id }) => {
 }
 
 export const createComment = ({ input }) => {
+  requireAuth()
+  const { body, learningId } = input
   return db.comment.create({
-    data: input,
+    data: {
+      body,
+      user: {
+        connect: { id: context.currentUser.id },
+      },
+      learning: {
+        connect: { id: learningId },
+      },
+    },
   })
 }
 

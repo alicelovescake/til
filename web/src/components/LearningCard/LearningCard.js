@@ -1,5 +1,6 @@
 import { formatDistanceToNow } from 'date-fns'
-import { RiLeafLine } from 'react-icons/ri'
+import { RiLeafLine, RiChatNewLine } from 'react-icons/ri'
+import CommentComposer from 'src/components/CommentComposer'
 
 const LearningCard = ({ learning }) => {
   return (
@@ -8,13 +9,21 @@ const LearningCard = ({ learning }) => {
 
       <div className="flex justify-between items-center">
         <div className="text-xs text-gray-600">
-          Learned {formatDistanceToNow(new Date(learning.createdAt), { addSuffix: true })}
+          Learned{' '}
+          {formatDistanceToNow(new Date(learning.createdAt), {
+            addSuffix: true,
+          })}
         </div>
 
-        <div className="text-gray-600">
-          <RiLeafLine className="text-2xl hover:text-til-green hover:cursor-pointer" />
+        <div className="text-gray-600 flex space-x-2">
+          <RiLeafLine className="text-xl hover:text-til-green hover:cursor-pointer" />
+          <RiChatNewLine className="text-xl hover:text-til-green hover:cursor-pointer" />
         </div>
       </div>
+      <CommentComposer learningId={learning.id} />
+      {learning.comments.map((comment) => (
+        <div key={comment.id}>{comment.body}</div>
+      ))}
     </div>
   )
 }
