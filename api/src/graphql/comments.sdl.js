@@ -18,13 +18,11 @@ export const schema = gql`
   }
 
   input CreateCommentInput {
-    userId: Int!
     body: String!
     learningId: Int!
   }
 
   input UpdateCommentInput {
-    userId: Int
     body: String
     learningId: Int
   }

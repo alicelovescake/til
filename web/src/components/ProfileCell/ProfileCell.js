@@ -14,6 +14,10 @@ export const QUERY = gql`
         id
         content
         createdAt
+        comments {
+          id
+          body
+        }
       }
     }
   }
@@ -33,12 +37,19 @@ export const Success = ({ userByUsername }) => {
 
         <div className="flex justify-center items-center space-x-1 text-gray-600">
           <RiCake2Line />
-          <div>Joined {formatDistanceToNow(new Date(userByUsername.createdAt), { addSuffix: true })}</div>
+          <div>
+            Joined{' '}
+            {formatDistanceToNow(new Date(userByUsername.createdAt), {
+              addSuffix: true,
+            })}
+          </div>
         </div>
       </div>
 
       <div className="space-y-5 md:w-2/3 mx-auto">
-        {userByUsername.learnings.map(learning => <LearningCard key={learning.id} learning={learning} />)}
+        {userByUsername.learnings.map((learning) => (
+          <LearningCard key={learning.id} learning={learning} />
+        ))}
       </div>
     </>
   )
