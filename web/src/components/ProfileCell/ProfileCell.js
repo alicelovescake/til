@@ -18,6 +18,9 @@ export const QUERY = gql`
           id
           body
         }
+        likes {
+          id
+        }
       }
     }
   }

@@ -1,6 +1,5 @@
 import { navigate, routes } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
-
 import AppLayout from 'src/layouts/AppLayout'
 
 const WelcomePage = () => {

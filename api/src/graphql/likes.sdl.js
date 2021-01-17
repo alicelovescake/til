@@ -17,18 +17,11 @@ export const schema = gql`
   }
 
   input CreateLikeInput {
-    userId: Int!
     learningId: Int!
-  }
-
-  input UpdateLikeInput {
-    userId: Int
-    learningId: Int
   }
 
   type Mutation {
     createLike(input: CreateLikeInput!): Like!
-    updateLike(id: Int!, input: UpdateLikeInput!): Like!
     deleteLike(id: Int!): Like!
   }
 `

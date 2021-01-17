@@ -11,9 +11,12 @@ const AuthModal = () => {
   return (
     <div>
       <div>
-        {
-          isAuthenticated && <><span className="font-bold">{currentUser.username}</span><span>{' | '}</span></>
-        }
+        {isAuthenticated && (
+          <>
+            <span className="font-bold">{currentUser.username}</span>
+            <span>{' | '}</span>
+          </>
+        )}
 
         <span
           className="hover:text-gray-700 hover:cursor-pointer"
@@ -29,17 +32,16 @@ const AuthModal = () => {
         </span>
       </div>
 
-      <Modal open={displayAuthModal} onModalClose={() => setDisplayAuthModal(false)}>
+      <Modal
+        open={displayAuthModal}
+        onModalClose={() => setDisplayAuthModal(false)}
+      >
         <h2 className="font-bold text-6xl text-center">👋</h2>
 
         <div>
-          <p>
-            Throw your email in the box below to log in.
-          </p>
+          <p>Throw your email in the box below to log in.</p>
 
-          <p>
-            If you don't have an account yet, we'll handle that for you!
-          </p>
+          <p>If you don't have an account yet, we'll handle that for you!</p>
         </div>
 
         <form action="#" className="space-y-4 flex flex-col">
@@ -51,7 +53,11 @@ const AuthModal = () => {
             placeholder="leonardo.davinci@florencemail.com"
           />
 
-          <Button onClick={async () => { await logIn({ email }) }} >
+          <Button
+            onClick={async () => {
+              await logIn({ email })
+            }}
+          >
             {isAuthenticated ? 'Log out' : 'Log in'}
           </Button>
         </form>

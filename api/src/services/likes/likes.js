@@ -1,3 +1,5 @@
+import { context } from '@redwoodjs/api/dist/globalContext'
+
 import { db } from 'src/lib/db'
 
 export const likes = () => {
@@ -12,14 +14,14 @@ export const like = ({ id }) => {
 
 export const createLike = ({ input }) => {
   return db.like.create({
-    data: input,
-  })
-}
-
-export const updateLike = ({ id, input }) => {
-  return db.like.update({
-    data: input,
-    where: { id },
+    data: {
+      user: {
+        connect: { id: context.currentUser.id },
+      },
+      learning: {
+        connect: { id: input.learningId },
+      },
+    },
   })
 }
 
