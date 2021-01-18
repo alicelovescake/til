@@ -20,6 +20,7 @@ export const QUERY = gql`
         }
         likes {
           id
+          userId
         }
       }
     }
